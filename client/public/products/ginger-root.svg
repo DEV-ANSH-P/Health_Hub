@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Ginger Root">
+      <defs>
+        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#e8d4b1"/>
+          <stop offset="100%" stop-color="#f8f5ef"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="600" fill="url(#bg)"/>
+      <circle cx="150" cy="120" r="90" fill="#ffffff" opacity="0.28"/>
+      <circle cx="620" cy="150" r="130" fill="#173d32" opacity="0.10"/>
+      <path d="M150 420 C260 280, 390 260, 488 390 S650 530, 720 420 L720 560 L150 560 Z" fill="#173d32" opacity="0.14"/>
+      <path d="M360 170 C420 118, 510 120, 560 180 C500 190, 470 235, 470 304 C400 255, 330 230, 360 170 Z" fill="#ffffff" opacity="0.38"/>
+      <rect x="108" y="74" width="220" height="52" rx="26" fill="#173d32" opacity="0.84"/>
+      <text x="140" y="108" fill="#f7f3eb" font-family="Georgia, serif" font-size="28" font-weight="700">Healthy</text>
+      <text x="210" y="300" fill="#173d32" font-family="Georgia, serif" font-size="64" font-weight="700">Ginger Root</text>
+      <text x="210" y="350" fill="#173d32" font-family="Arial, sans-serif" font-size="24" letter-spacing="6">HERBAL WELLNESS</text>
+      <circle cx="610" cy="420" r="88" fill="#d2c4a5" opacity="0.75"/>
+      <path d="M610 320 C620 360, 636 390, 650 430 C620 440, 592 439, 567 430 C576 382, 592 352, 610 320 Z" fill="#ffffff" opacity="0.6"/>
+    </svg>
