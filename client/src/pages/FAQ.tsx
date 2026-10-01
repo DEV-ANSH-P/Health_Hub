@@ -1,0 +1,11 @@
+import { useMemo, useState } from "react";
+import { ArrowRight, HelpCircle, Search } from "lucide-react";
+import { Link } from "wouter";
+import SiteHeader from "@/components/SiteHeader";
+import { Input } from "@/components/ui/input";
+import { faqList } from "./Home";
+export default function FAQ() {
+  const [query, setQuery] = useState("");
+  const results = useMemo(() => faqList.filter((f) => `${f.q} ${f.a}`.toLowerCase().includes(query.toLowerCase())), [query]);
+  return <div className="min-h-screen bg-[#f4f1e9] text-[#173d32]"><SiteHeader /><main className="mx-auto max-w-5xl px-5 py-12 lg:px-10"><div className="text-center"><HelpCircle className="mx-auto h-10 w-10 text-[#b07926]" /><p className="mt-4 text-xs font-bold uppercase tracking-[.25em] text-[#b07926]">Support centre</p><h1 className="mt-3 font-display text-5xl">Questions, made simple.</h1><p className="mx-auto mt-4 max-w-xl text-[#173d32]/65">Find clear answers about guidance, products, expert previews, and care listings.</p></div><div className="relative mx-auto mt-8 max-w-xl"><Search className="absolute left-4 top-3 h-5 w-5 text-[#173d32]/45" /><Input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search frequently asked questions" className="h-12 rounded-full bg-white pl-12" /></div><div className="mt-10 space-y-3">{results.map((faq) => <details key={faq.q} className="group rounded-2xl border border-[#173d32]/10 bg-white p-5"><summary className="cursor-pointer list-none pr-8 font-display text-xl">{faq.q}<span className="float-right text-[#b07926] group-open:rotate-45">＋</span></summary><p className="mt-3 max-w-3xl text-sm leading-7 text-[#173d32]/65">{faq.a}</p></details>)}{!results.length && <p className="py-10 text-center text-[#173d32]/60">No match yet—try a different phrase.</p>}</div><div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-[#173d32] p-7 text-white"><div><h2 className="font-display text-2xl">Still need a hand?</h2><p className="mt-1 text-sm text-white/65">Explore general wellness information in the AI demo. It is not a clinical service.</p></div><Link href="/guidance" className="inline-flex items-center gap-2 rounded-full bg-[#d79a32] px-5 py-3 text-sm font-bold text-[#173d32]">View guidance demo <ArrowRight className="h-4 w-4" /></Link></div></main></div>;
+}
